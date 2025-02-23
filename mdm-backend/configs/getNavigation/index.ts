@@ -17,7 +17,8 @@ export default {
                 "projectSingle",
                 "consumerSingle",
                 "tarrifSingle",
-                "logs"
+                "logs",
+                "communication"
             ],
             "dashboard": {
                 "label": "Dashboard",
@@ -119,6 +120,12 @@ export default {
                 "icon": "BuildSharp",
                 "pageComponent": "logs",
                 "path": "/logs"
+            },
+            "communication":{
+                "label": "Communication",
+                "icon": "BuildSharp",
+                "pageComponent": "communication",
+                "path": "/communication"
             }
         }
     }

@@ -24,6 +24,7 @@ const MeterSelection: React.FC<MeterSelectionProps> = ({
     const [loaded, setLoaded] = useState<boolean>(false)
     const selector = useSelector()
     const tableSelections = selector(getTableSelections(viewAndSelectMetersTableId))
+    console.log("tableSelections",tableSelections)
     const [originalMeters, setOriginalMeters] = useState<any>([])
     const { dispatch } = useContext<any>(AppContext)
 

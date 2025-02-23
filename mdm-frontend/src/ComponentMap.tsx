@@ -14,6 +14,7 @@ import Tarrifs from "./pages/AdminPages/Tarrifs"
 import TarrifSingle from "./pages/AdminPages/TarrifSingle"
 import meterRecharge from "./pages/AdminPages/MeterRecharge"
 import Logs from "./pages/AdminPages/Logs"
+import Communication from "./pages/AdminPages/Communication"
 
 const ComponentMap: Record<string, React.FC> = {
     'dashboard': Dashboard,
@@ -31,7 +32,8 @@ const ComponentMap: Record<string, React.FC> = {
     'consumerSingle': ConsumerSingle,
     'tarrifSingle': TarrifSingle,
     'meterRecharge': meterRecharge,
-    'logs': Logs
+    'logs': Logs,
+    'communication':Communication
 }
 
 

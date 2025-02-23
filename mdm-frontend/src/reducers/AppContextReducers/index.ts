@@ -225,10 +225,13 @@ export const appContextReducer = createReducer(
     }),
     on(ADD_ADDITIONAL_FILTER, (state, payload) => {
         const { tableId, filterType, filterValue } = payload
+        console.log("multipROJECT STATE",state)
+        console.log("additional filter payload",payload)
         const oldFilters = state.tables[tableId].filters ?? {}
+        console.log("oldFilters",oldFilters);
         const oldAdditionalFilters = oldFilters?.additionalFilters ?? []
         const existingFilter = oldAdditionalFilters.find((filter: any) => filter.filterType === filterType)
-        if (existingFilter) {
+        if (existingFilter && filterType !== "multiProject") {
             const trackId = existingFilter.trackId
             return {
                 ...state,

@@ -12,6 +12,7 @@ type ActionModalProps = {
     isOkDisabled?: boolean,
     okBtnText?: string,
     onOk?: () => void
+    minHeight?:string
 }
 
 const ActionModal: React.FC<ActionModalProps> = ({
@@ -21,7 +22,8 @@ const ActionModal: React.FC<ActionModalProps> = ({
     children,
     isOkDisabled = true,
     okBtnText = "Save",
-    onOk
+    onOk,
+    minHeight
 }) => {
     const { dispatch } = useContext<any>(AppContext)
     const selector = useSelector()
@@ -44,7 +46,7 @@ const ActionModal: React.FC<ActionModalProps> = ({
             motionPreset='scale'
             isOpen={isOpen} onClose={onClose} size={size}>
             <ModalOverlay/>
-            <ModalContent>
+            <ModalContent minH={minHeight}>
                 <ModalHeader>{label}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
