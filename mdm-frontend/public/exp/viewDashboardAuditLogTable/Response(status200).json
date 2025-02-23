@@ -1,0 +1,78 @@
+{
+    "config": {
+        "label": "Audit Log",
+        "defaultFilters": {
+            "currPage": 1,
+            "perPage": 5
+        },
+        "columns": {
+            "order": [
+                "user",
+                "activity",
+                "time"
+            ],
+            "user": {
+                "label": "User",
+                "renderType": "link"
+            },
+            "activity": {
+                "label": "activity",
+                "renderType": "text"
+            },
+            "time": {
+                "label": "Time",
+                "renderType": "text"
+            }
+        }
+    },
+    "data": {
+        "totalRecords": 9,
+        "rows": [
+            {
+                "id": "user_1_id",
+                "user": {
+                    "label": "Diganta",
+                    "link": "/admin/users/diganta"
+                },
+                "activity": "View Profile",
+                "time": "2mins ago"
+            },
+            {
+                "id": "user_2_id",
+                "user": {
+                    "label": "Harsh",
+                    "link": "/admin/users/harsh"
+                },
+                "activity": "View Profile",
+                "time": "2mins ago"
+            },
+            {
+                "id": "user_3_id",
+                "user": {
+                    "label": "Diganta",
+                    "link": "/admin/users/diganta"
+                },
+                "activity": "View Profile",
+                "time": "2mins ago"
+            },
+            {
+                "id": "user_4_id",
+                "user": {
+                    "label": "Diganta",
+                    "link": "/admin/users/diganta"
+                },
+                "activity": "View Profile",
+                "time": "2mins ago"
+            },
+            {
+                "id": "user_5_id",
+                "user": {
+                    "label": "Diganta",
+                    "link": "/admin/users/diganta"
+                },
+                "activity": "View Profile",
+                "time": "2mins ago"
+            }
+        ]
+    }
+}

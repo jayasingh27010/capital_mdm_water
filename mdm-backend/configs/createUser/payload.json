@@ -1,0 +1,7 @@
+{
+    "firstName": "string",
+    "lastName": "string(optional)",
+    "username": "string",
+    "email": "string",
+    "userType": "string"
+}

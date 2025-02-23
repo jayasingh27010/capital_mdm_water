@@ -1,0 +1,58 @@
+{
+    "config": {
+        "actions": {
+            "order": [
+                "createProject"
+            ],
+            "createProject": {
+                "label": "Add Project",
+                "fields": {
+                    "order": [
+                        "projectName",
+                        "projectAddress",
+                        "projectCode",
+                        "billingType"
+                    ],
+                    "projectName": {
+                        "label": "Project Name",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "projectAddress": {
+                        "label": "Project Address",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "projectCode": {
+                        "label": "Project Code",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "billingType": {
+                        "label": "Billing Type",
+                        "columnSize": 6,
+                        "inputType": "selectInput",
+                        "required": true,
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "kWh",
+                                "description": "kWh"
+                            },
+                            {
+                                "value": "kVah",
+                                "description": "kVah"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

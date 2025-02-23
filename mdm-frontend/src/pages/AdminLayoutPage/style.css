@@ -1,0 +1,104 @@
+.admin-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-navigation {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 4px 0px 3.5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 0px 3.5px 0px rgba(0,0,0,0.2);
+    box-shadow: 4px 0px 3.5px 0px rgba(0,0,0,0.2);
+    height: 100vh;
+    width: 250px;
+    overflow-y: auto;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+.menu-item .menu-item-logo-container {
+    border-radius: 20px;
+    height: 37px;
+    width: 37px;
+    padding: 9px;
+    box-sizing: border-box;
+    
+    transition: all 0.2s linear;
+}
+
+.menu-item:hover .menu-item-logo-container,
+.menu-item.active .menu-item-logo-container {
+    background-color: #00ADEF;
+}
+.menu-item:hover .icon-holder,
+.menu-item.active .icon-holder {
+    fill: #FFF;
+    stroke: #FFF;
+}
+.menu-item .icon-holder {
+    fill: #00ADEF;
+    stroke: #00ADEF;
+}
+.menu-item .menu-item-label {
+    color: #A0AEC0;
+    font-weight: 500;
+}
+.menu-item:hover .menu-item-label,
+.menu-item.active .menu-item-label {
+    color: #5E5E5E;
+    font-weight: 600;
+}
+
+.menu-item.active .menu-item-logo-container,
+.menu-item.active .menu-item-label,
+.menu-item:hover .menu-item-logo-container {
+    -webkit-box-shadow: 0px 2px 3.5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 3.5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 3.5px 0px rgba(0,0,0,0.1);
+}
+
+
+.menu-item .menu-item-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+}
+
+.admin-layout-content {
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.app-bar {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-box-shadow: 0px 4px 3.5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px 3.5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 3.5px 0px rgba(0,0,0,0.2);
+}
+
+.app-bar-acc-info {
+    box-sizing: border-box;
+    border: 1px solid #FFF;
+    border-radius: 40px;
+}
+
+.app-bar-acc-info:hover {
+    cursor: pointer;
+}

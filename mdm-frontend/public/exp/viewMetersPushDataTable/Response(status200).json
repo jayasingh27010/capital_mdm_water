@@ -1,0 +1,88 @@
+{
+    "config": {
+        "id": "CPS-00005",
+        "label": "CPS-00005 Meter Push Data",
+        "defaultFilters": {
+            "currPage": 1,
+            "perPage": 5
+        },
+        "columns": {
+            "order": [
+                "meterSerialNo",
+                "powerFactor",
+                "cumulativeWh",
+                "cumulativeVah",
+                "overloadStatus"
+            ],
+            "meterSerialNo": {
+                "label": "Meter Serial No",
+                "renderType": "link"
+            },
+            "powerFactor": {
+                "label": "Power Factor",
+                "renderType": "text"
+            },
+            "cumulativeWh": {
+                "label": "Cumulative Wh",
+                "renderType": "text"
+            },
+            "cumulativeVah": {
+                "label": "Cumulative Vah",
+                "renderType": "text"
+            },
+            "overloadStatus": {
+                "label": "Overload Status",
+                "renderType": "text"
+            }
+        }
+    },
+    "data": {
+        "totalRecords": 9,
+        "rows": [
+            {
+                "id": "meter_6_id",
+                "meterSerialNo": {
+                    "label": "CPS-00005",
+                    "link": "/admin/meters/CPS-00005"
+                },
+                "powerFactor": "100",
+                "cumulativeWh": "9999999",
+                "cumulativeVah": "9999999",
+                "overloadStatus": "2"
+            },
+            {
+                "id": "meter_7_id",
+                "meterSerialNo": {
+                    "label": "CPS-00005",
+                    "link": "/admin/meters/CPS-00005"
+                },
+                "powerFactor": "100",
+                "cumulativeWh": "9999999",
+                "cumulativeVah": "9999999",
+                "overloadStatus": "2"
+            },
+            {
+                "id": "meter_8_id",
+                "meterSerialNo": {
+                    "label": "CPS-00005",
+                    "link": "/admin/meters/CPS-00005"
+                },
+                "powerFactor": "100",
+                "cumulativeWh": "9999999",
+                "cumulativeVah": "9999999",
+                "overloadStatus": "2"
+            },
+            {
+                "id": "meter_9_id",
+                "meterSerialNo": {
+                    "label": "CPS-00005",
+                    "link": "/admin/meters/CPS-00005"
+                },
+                "powerFactor": "100",
+                "cumulativeWh": "9999999",
+                "cumulativeVah": "9999999",
+                "overloadStatus": "2"
+            }
+        ]
+    }
+}

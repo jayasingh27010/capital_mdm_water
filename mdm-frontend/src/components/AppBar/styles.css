@@ -1,0 +1,12 @@
+.breadcrumb.hover-active-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumb {
+    display: inline-block;
+    font-weight: 700;
+    /* white-space: nowrap; 
+    text-overflow: ellipsis;
+    overflow: hidden; */
+}

@@ -1,0 +1,4 @@
+{
+    "changePasswordToken": "string",
+    "password": "string"
+  }

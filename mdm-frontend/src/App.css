@@ -1,0 +1,90 @@
+.chakra-table__container::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  .chakra-table__container::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  }
+   
+  .chakra-table__container::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+  
+
+.details-widget .field-input {
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.details-widget .field-input.linkButton {
+    border: 1px solid #00adef;
+    cursor: pointer;
+}
+
+.details-widget .field-input label {
+    font-weight: 600;
+}
+
+.details-widget .field-input.linkButton label {
+    color: #00adef;
+    cursor: pointer;
+}
+
+.details-widget .field-value {
+    flex-grow: 1;
+    text-align: right;
+    color: #A0AEC0;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.details-widget .field-value.link {
+    color: #00adef;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.details-widget .field-input.linkButton,
+.details-widget .field-input.linkButton .field-value
+ {
+    color: #00adef;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.details-widget .row {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.details-widget .row > * {
+    width: auto;
+}
+.details-widget.widget-consumer-single .row > * {
+    width: 30%;
+}
+.details-widget.widget-consumer-single .field-input {
+    display: flex;
+    align-items: center;
+}
+
+tbody tr:nth-child(even) td:first-child{
+    background-color: #fff;
+}
+
+thead tr:first-child {
+    left: 0;
+    top: 0;
+    position: sticky;
+    z-index: 2000;
+}
+
+thead tr:first-child > th:first-child,
+tbody tr > td:first-child{
+    background-color: #fff;
+    position: sticky;
+    left: 0;
+    z-index: 100;
+}

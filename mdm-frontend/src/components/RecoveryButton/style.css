@@ -1,0 +1,15 @@
+.recovery-account-btn {
+        width: 300px;
+        background-color: #00ADEF;
+        border-radius: 6px;
+        padding: 20px;
+        font-size: 11px;
+}
+
+.recovery-account-btn-2 {
+        flex: 1;
+        background-color: #00ADEF;
+        border-radius: 6px;
+        padding: 20px;
+        font-size: 11px;
+}

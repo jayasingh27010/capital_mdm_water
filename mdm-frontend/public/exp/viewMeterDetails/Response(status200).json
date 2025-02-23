@@ -1,0 +1,56 @@
+{
+    "config": {
+        "label": "Meter Details",
+        "fields": {
+            "order": [
+                "meterSerialNo",
+                "moduleNo",
+                "phaseType",
+                "sourceType",
+                "consumptionType"
+            ],
+            "meterSerialNo": {
+                "label": "Meter Serial No",
+                "columnSize": 3,
+                "inputType": "text",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "moduleNo": {
+                "label": "Module No.",
+                "columnSize": 3,
+                "inputType": "text",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "phaseType": {
+                "label": "Phase Type",
+                "columnSize": 3,
+                "inputType": "text",
+                "maxLength": 10,
+                "isSingleLineInput": true
+            },
+            "sourceType": {
+                "label": "Source Type",
+                "columnSize": 3,
+                "inputType": "text",
+                "maxLength": 10,
+                "isSingleLineInput": true
+            },
+            "consumptionType": {
+                "label": "Consumption Type",
+                "columnSize": 3,
+                "inputType": "text",
+                "maxLength": 10,
+                "isSingleLineInput": true
+            }
+        }
+    },
+    "data": {
+        "meterSerialNo": "CPS-00001",
+        "moduleNo": "234",
+        "phaseType": "Single",
+        "sourceType": "dual",
+        "consumptionType": "Gas"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "token": "validToken",
+    "userInfo": {
+        "id": "admin",
+        "accountType": "Super Admin",
+        "username": "admin",
+        "password": "password",
+        "firstName": "Harsh",
+        "lastName": "Joshi"
+    }
+}

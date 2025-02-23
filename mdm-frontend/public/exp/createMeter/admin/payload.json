@@ -1,0 +1,7 @@
+{
+    "serialNo": "string",
+    "meterType": "string",
+    "phaseType": "string",
+    "consumptionType": "string",
+    "sourceType": "string"
+}

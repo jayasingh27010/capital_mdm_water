@@ -1,0 +1,7 @@
+.btn-custom-primary {
+    background-color: #00ADEF; 
+}
+
+.btn-custom-primary:hover {
+    background-color: #A0AEC0; /* A darker shade for hover effect */
+}

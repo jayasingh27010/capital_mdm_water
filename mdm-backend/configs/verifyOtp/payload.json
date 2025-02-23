@@ -1,0 +1,6 @@
+{
+    "verifyBy": "string",
+    "email": "string(optional parameter)",
+    "username": "string(optional parameter)",
+    "otp": "string"
+}

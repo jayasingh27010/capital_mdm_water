@@ -1,0 +1,7 @@
+{
+    "gatewayNumber": "number",
+    "location": "string",
+    "connectivityType":"string",
+    "ipAddress": "string(if connectivityType =gprs ,then present otherwise not present)",
+    "simNo": "string(if connectivityType= ethernet, then present otherwise not present)"
+}

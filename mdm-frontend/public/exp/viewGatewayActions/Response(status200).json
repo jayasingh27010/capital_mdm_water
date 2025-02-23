@@ -1,0 +1,112 @@
+{
+    "config": {
+        "actions": {
+            "order": [
+                "createGateway"
+            ],
+            "createGateway": {
+                "label": "Add Gateway",
+                "fields": {
+                    "order": [
+                        "gatewayNumber",
+                        "location",
+                        "connectivityType",
+                        "simNo",
+                        "ipAddress"
+                    ],
+                    "gatewayNumber": {
+                        "label": "Gateway Number",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "location": {
+                        "label": "Location",
+                        "columnSize": 6,
+                        "isAutocomplete": true,
+                        "inputType": "selectInput",
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "project1",
+                                "description": "Project 1"
+                            },
+                            {
+                                "value": "project2",
+                                "description": "Project 2"
+                            },
+                            {
+                                "value": "project3",
+                                "description": "Project 3"
+                            },
+                            {
+                                "value": "project4",
+                                "description": "Project 4"
+                            },
+                            {
+                                "value": "project5",
+                                "description": "Project 5"
+                            },
+                            {
+                                "value": "project6",
+                                "description": "Project 6"
+                            },
+                            {
+                                "value": "project7",
+                                "description": "Project 7"
+                            },
+                            {
+                                "value": "project8",
+                                "description": "Project 8"
+                            },
+                            {
+                                "value": "project9",
+                                "description": "Project 9"
+                            },
+                            {
+                                "value": "project10",
+                                "description": "Project 10"
+                            }
+                        ]
+                    },
+                    "connectivityType": {
+                        "label": "Connectivity Type",
+                        "columnSize": 6,
+                        "required": true,
+                        "inputType": "selectInput",
+                        "defaultOption": "-",
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "gprs",
+                                "description": "GPRS"
+                            },
+                            {
+                                "value": "ethernet",
+                                "description": "Ethernet"
+                            }
+                        ]
+                    },
+                    "simNo": {
+                        "label": "SIM No",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "hide": true
+                    },
+                    "ipAddress": {
+                        "label": "IP Address",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "hide": true
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "config": {
+        "id": "Diganta Ray",
+        "label": "Meter Recharges",
+        "defaultFilters": {
+            "currPage": 1,
+            "perPage": 5
+        },
+        "filterConfig": {
+            "filterType": {
+                "label": "Filter Type",
+                "columnSize": 12,
+                "inputType": "selectInput",
+                "selectOptions": [
+                    {
+                        "value": "-",
+                        "description": "-"
+                    },
+                    {
+                        "value": "startDate",
+                        "description": "Start Date"
+                    },
+                    {
+                        "value": "endDate",
+                        "description": "End Date"
+                    }
+                ]
+            },
+            "filterValue": {
+                "startDate": {
+                    "label": "Filter Value",
+                    "columnSize": 12,
+                    "inputType": "dateInput"
+                },
+                "endDate": {
+                    "label": "Filter Value",
+                    "columnSize": 12,
+                    "inputType": "dateInput"
+                },
+                "projectNameSearch": {
+                    "label": "Filter Value",
+                    "columnSize": 12,
+                    "inputType": "textInput"
+                }
+            }
+        },
+        "columns": {
+            "order": [
+                "rechargeDate",
+                "rechargeAmount"
+            ],
+            "rechargeDate": {
+                "label": "Recharge Date",
+                "renderType": "text"
+            },
+            "rechargeAmount": {
+                "label": "Recharge Amount",
+                "renderType": "text"
+            }
+        }
+    },
+    "data": {
+        "totalRecords": 9,
+        "rows": [
+            {
+                "id": "meter_1_id",
+                "rechargeDate": "1 June 2024",
+                "rechargeAmount": "₹3000",
+                "rDate": 1721632458757
+            }
+        ]
+    }
+}

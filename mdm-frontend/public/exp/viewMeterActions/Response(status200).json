@@ -1,0 +1,116 @@
+{
+    "config": {
+        "actions": {
+            "order": [
+                "createMeter",
+                "metersCSVUpload"
+            ],
+            "createMeter": {
+                "label": "Add Meter",
+                "fields": {
+                    "order": [
+                        "meterSerialNo",
+                        "moduleNo",
+                        "phaseType",
+                        "sourceType",
+                        "consumptionType"
+                    ],
+                    "meterSerialNo": {
+                        "label": "Enter Meter Serial No",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "moduleNo": {
+                        "label": "Enter Module No.",
+                        "columnSize": 6,
+                        "inputType": "textInput",
+                        "required": true
+                    },
+                    "phaseType": {
+                        "label": "Select Phase Type",
+                        "columnSize": 6,
+                        "inputType": "selectInput",
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "Single",
+                                "description": "Single"
+                            },
+                            {
+                                "value": "Three Phase",
+                                "description": "Three Phase"
+                            },
+                            {
+                                "value": "ht",
+                                "description": "HT"
+                            },
+                            {
+                                "value": "ct",
+                                "description": "CT"
+                            },
+                            {
+                                "value": "ltct",
+                                "description": "LTCT"
+                            }
+                        ]
+                    },
+                    "sourceType": {
+                        "label": "Select Source Type",
+                        "columnSize": 6,
+                        "inputType": "selectInput",
+                        "required": true,
+                        "isAutocomplete": true,
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "Single",
+                                "description": "Single"
+                            },
+                            {
+                                "value": "Dual",
+                                "description": "Dual"
+                            }
+                        ]
+                    },
+                    "consumptionType": {
+                        "label": "Select Consumption Type",
+                        "columnSize": 6,
+                        "inputType": "selectInput",
+                        "selectOptions": [
+                            {
+                                "value": "-",
+                                "description": "-"
+                            },
+                            {
+                                "value": "Gas",
+                                "description": "Gas"
+                            },
+                            {
+                                "value": "Energy",
+                                "description": "Energy"
+                            },
+                            {
+                                "value": "Water",
+                                "description": "Water"
+                            },
+                            {
+                                "value": "Other",
+                                "description": "Other"
+                            }
+                        ]
+                    }
+                }
+            },
+            "metersCSVUpload": {
+                "label": "Meter CSV Upload"
+            }
+        }
+    }
+}

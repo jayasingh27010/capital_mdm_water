@@ -1,0 +1,172 @@
+{
+    "config": {
+        "label": "Meters",
+        "fields": {
+            "order": [
+                "total",
+                "down",
+                "unalloted",
+                "unstate",
+                "relayOff",
+                "lowBalance",
+                "overloaded"
+            ],
+            "total": {
+                "label": "Total",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "down": {
+                "label": "Down",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "unalloted": {
+                "label": "Un-Alloted",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "unstate": {
+                "label": "Un-State",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "relayOff": {
+                "label": "Relay Off",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "lowBalance": {
+                "label": "Low Balance",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            },
+            "overloaded": {
+                "label": "Overloaded",
+                "columnSize": 3,
+                "inputType": "filterAndLink",
+                "isSingleLineInput": true,
+                "maxLength": 10
+            }
+        }
+    },
+    "data": {
+        "total": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "total"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "1000"
+        },
+        "down": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "down"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "60"
+        },
+        "unalloted": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "unalloted"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "20"
+        },
+        "unstate": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "unstate"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "20"
+        },
+        "relayOff": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "relayOff"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "20"
+        },
+        "lowBalance": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "lowBalance"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "20"
+        },
+        "overloaded": {
+            "link": "/admin/projects/project1",
+            "tableId": "projectMetersTable",
+            "tableFilters": {
+                "additionalFilters": [
+                    {
+                        "filterType": "meters",
+                        "filterValue": "overloaded"
+                    }
+                ],
+                "perPage": 5,
+                "currPage": 1
+            },
+            "value": "20"
+        }
+    }
+}
