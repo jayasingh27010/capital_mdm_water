@@ -263,6 +263,28 @@ const responses: any = {
       },
     },
   },
+  "/admin/communication": {
+    config: {
+        label: [
+            {
+                displayName: "Communication",
+                isClickable: true,
+                clickPath: "/admin/communication",
+            },
+        ],
+        iconName: "Link",
+        sections: {
+            order: ["communicationActions", "allCommunicationsTable"],
+            communicationActions: {
+                columnSize: 12,
+            },
+           
+            allCommunicationsTable: {
+                columnSize: 12,
+            },
+        },
+    },
+},
   // "/admin/settings":{
   //     config: {
   //         label:[

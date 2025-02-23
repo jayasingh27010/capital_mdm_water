@@ -41,11 +41,16 @@ const TableFilters: React.FC<TableFiltersProps> = ({
 
     const actionModalId = tableId.replace("Id", "FilterModal")
     const filterOptions = filterConfig.filterType.selectOptions
-
+    console.log(filterConfig)
     const handleOpenActionModal = () => {
         openActionModal(actionModalId)
     }
-
+    useEffect(()=>{
+      console.log("tablefilters config",filterConfig)
+    },[filterConfig])
+    useEffect(()=>{
+        console.log("tablefilters filterValue",filterValue)
+      },[filterValue])
     const openActionModal = (actionId: string) => {
         dispatch({
             type: OPEN_ACTION_MODAL,
@@ -59,20 +64,34 @@ const TableFilters: React.FC<TableFiltersProps> = ({
         setSelectedFilter(undefined)
     }
 
-    const handleFilterValueChange = (value: any) => {
+    const handleFilterValueChange = useCallback((value: any) => {
+        console.log(filterType)
+        if (filterType === 'userType') {
+            if (!confirm('Are you sure you want to change User Type? Doing this remove all the existing selections')) {
+                return;
+            }
+        }
         setFilterValue(value)
-    }
+    }, [filterType])
 
     const filterShowValueReducerCallback = (acc: any, filter: FilterDesc) => {
-        const isSelectInput = filterConfig.filterValue[filter.filterType].inputType === "selectInput"
+        const field = filterConfig.filterValue[filter.filterType]
+        const isSelectInput = field.inputType === "selectInput"
+        const isMultiSelectInput = Boolean(field.allowMultiple)
         let value: any = filter?.filterValue
         if (isSelectInput) {
-            const selectOptions = filterConfig.filterValue[filter.filterType].selectOptions
-            value = selectOptions.find((option: any) => option.value === filter.filterValue).description
+            const selectOptions = field.selectOptions
+            if (isMultiSelectInput) {
+                value = selectOptions
+                .filter((option: any) => filter.filterValue.includes(option.value))
+                .map((option: any) => option.description)
+            } else {
+                value = selectOptions.find((option: any) => option.value === filter.filterValue).description
+            }
         }
         return {
             ...acc,
-            [filter.trackId]: value
+            [filter.trackId]: isMultiSelectInput ? value.join(" | "): value
         }
     }
 
@@ -80,9 +99,18 @@ const TableFilters: React.FC<TableFiltersProps> = ({
         return filters.reduce(filterShowValueReducerCallback, {})
     }
 
-    const filterValueReducer = (filters: any[]) => {
-        return filters.reduce((acc: any, filter: FilterDesc) => ({...acc, [filter.trackId]: filter.filterValue}), {})
-    }
+    const filterValueReducer = useCallback((filters: any[]) => {
+        return filters.reduce((acc: any, filter: FilterDesc) => {
+            // const field = filterConfig.filterValue[filter.filterType]
+            // if (field.allowMultiple) {
+            //     return ({
+            //         ...acc,
+                    
+            //     })
+            // }
+            return ({...acc, [filter.trackId]: filter.filterValue})
+        }, {})
+    }, [filterConfig])
 
     const filterTypeReducer = (filters: any[]) => {
         return filters.reduce((acc: any, filter: FilterDesc) => ({...acc, [filter.trackId]: filter.filterType}), {})
@@ -170,9 +198,12 @@ const TableFilters: React.FC<TableFiltersProps> = ({
 
     const handleFilterClick = useCallback((fieldId: string, _: any) => {
         setSelectedFilter(fieldId)
+        
         setFilterType(filterTypeReducer(filters)[fieldId])
         setFilterValue(filterValueReducer(filters)[fieldId])
-    }, [filters])
+    }, [filters, filterValueReducer])
+
+    
 
     // useEffect(() => {
     //     let errorMsg = ""
@@ -198,6 +229,10 @@ const TableFilters: React.FC<TableFiltersProps> = ({
             }
         })
     }
+
+    useEffect(() => {
+        console.log("filters", filterValue)
+    }, [filterValue])
 
     return (
         <>

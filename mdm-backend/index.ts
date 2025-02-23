@@ -17,12 +17,14 @@ import tarrifsRouter from "./controllers/tarrifs";
 import consumersRouter from "./controllers/consumers";
 import billingRouter from "./controllers/billing";
 import devConfigRouter from "./controllers/devConfig";
+
 import meterPushData from "./services/DBservice/MockDBData/meterPushData";
 import meterRechargeRouter from "./controllers/ManualRecharge";
 import { Hijack } from "express-multi-hijack"
 import { parseAuthTokenFromReq } from "./utilities";
 import AuthService from "./services/AuthService";
 import consumptiomRouter from "./controllers/graph/consumer";
+import communicationRouter from "./controllers/communication";
 dotenv.config();
 
 const app: Express = express();
@@ -81,6 +83,7 @@ app.use(tarrifsRouter)
 app.use(billingRouter)
 app.use(devConfigRouter)
 app.use(meterRechargeRouter)
+app.use(communicationRouter)
 
 app.use((err: any, _: Request, res: Response, next: NextFunction) => {
     if (err) {

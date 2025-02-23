@@ -35,7 +35,9 @@ export interface FieldSingleProps extends Field {
     onEnterPress?: () => void
     onChange?: (value: any) => void,
     onClick?: (e?: any) => void,
-    isAutocomplete?: boolean
+    isAutocomplete?: boolean;
+    allowMultiple?: boolean;
+    
 }
 
 export interface ButtonProps extends ChakraButtonProps {

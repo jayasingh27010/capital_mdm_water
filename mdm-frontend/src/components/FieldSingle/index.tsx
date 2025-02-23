@@ -6,7 +6,7 @@ import PinInput from "../FieldComponents/PinInput";
 import RequiredStar from "../FieldComponents/RequiredStar";
 import SelectInput from "../FieldComponents/SelectInput";
 import Display from "../FieldComponents/Display";
-import { useCallback, useContext } from "react";
+import { useCallback, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "src/contexts";
 import { POPULATE_ADDITIONAL_FILTERS } from "src/actions/AppContextActions";
@@ -32,6 +32,7 @@ const FieldSingle: React.FC<FieldSingleProps> = (props) => {
     selectOptions = [],
     maxLength = 10,
     isAutocomplete = false,
+    allowMultiple = false,
     hide = false,
     onClick,
     ref,
@@ -39,7 +40,6 @@ const FieldSingle: React.FC<FieldSingleProps> = (props) => {
   } = props;
   const { dispatch } = useContext<any>(AppContext);
   const navigate = useNavigate();
-
   const getInput = (inputType?: string) => {
     switch (inputType) {
       case "textInput":
@@ -90,6 +90,7 @@ const FieldSingle: React.FC<FieldSingleProps> = (props) => {
       case "selectInput":
         return (
           <SelectInput
+            allowMultiple={allowMultiple}
             isAutocomplete={isAutocomplete}
             isInvalid={isInvalid}
             onChange={onChange}

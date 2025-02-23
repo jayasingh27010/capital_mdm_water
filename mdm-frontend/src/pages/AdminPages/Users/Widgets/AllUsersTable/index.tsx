@@ -6,9 +6,15 @@ import TableFilters from "src/components/TableComponents/TableFilters"
 import ReloadButton from "src/components/TableComponents/ReloadButton"
 import { useApi } from "src/api"
 
-const tableId = "allUsersTable"
-
-const AllUsersTable: React.FC = () => {
+//const tableId = "allUsersTable"
+interface AllUsersTableProps {
+    tableId?: string
+    showCheckbox?: boolean
+}
+const AllUsersTable: React.FC<AllUsersTableProps> = ({
+    tableId = "allUsersTable",
+    showCheckbox =false
+}) => {
     const { data, isLoading } = useApi(viewAllUsersTable)
     const [filterConfig, setFilterConfig] = useState<any>(undefined)
     const [defaultFilters, setDefaultFilters] = useState<any>(undefined)
@@ -18,7 +24,7 @@ const AllUsersTable: React.FC = () => {
             .then(({ data }: any) => {
                 resolve({
                     columns: data.config.columns,
-                    rowData: data.data.rows,
+                    rowData: data.data.rows?.map((row: any) => ({...row, id: row.userId})),
                     totalRecords: data.data.totalRecords
                 })
             })
@@ -45,13 +51,14 @@ const AllUsersTable: React.FC = () => {
                         </p>
                         {filterConfig &&
                         <div className="me-2">
-                            <TableFilters filterConfig={filterConfig} tableId={tableId}/>
+                            <TableFilters filterConfig={filterConfig} tableId={tableId} />
                         </div>}
                         <div>
                             <ReloadButton tableId={tableId}/>
                         </div>
                     </div>
                     <Table
+                        showCheckbox={showCheckbox}
                         defaultFilters={defaultFilters}
                         enableQuickSeach={true}
                         tableId={tableId}
